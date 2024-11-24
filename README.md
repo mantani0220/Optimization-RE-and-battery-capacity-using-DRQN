@@ -14,7 +14,7 @@ Python implementation of "Renewable Energy Bidding and Battery Size Co-optimizat
    ```
 
 <div align=left> 
-<img src="./plot/bar_graph_average_random_update_year.pdf" width=300 alt="Total net revenue F for various BESS sizes"/>
+<img src="./plot/bar_graph_average_random_update_year.png" width=300 alt="Total net revenue F for various BESS sizes"/>
 <img src="./plot/box_graph_average_random_update_year_3.png" width=300 alt="Net profit G considering BESS installation costs"/>
 </div>
 
@@ -36,7 +36,7 @@ Python implementation of "Renewable Energy Bidding and Battery Size Co-optimizat
 
 ## Co-design (Applicability to Long-Term Data)
 
-1. Training of :
+1. Training of co-desing agent with parallel workers:
    ```console
     ~/main_codesign_drqn_apex.py
    ```
