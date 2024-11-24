@@ -6,11 +6,11 @@ Python implementation of "Renewable Energy Bidding and Battery Size Co-optimizat
 
 1. Training of a single DRQN agent for each BESS size setting:
    ```console
-    ~/main_drqn_multiple.py
+    ./main_drqn_multiple.py
    ```
 1. Training of multiple DRQN agents in parallel:
    ```console
-    ~/main_drqn_multiple.py
+    ./main_drqn_multiple.py
    ```
 
 <div align=left> 
@@ -21,13 +21,13 @@ Python implementation of "Renewable Energy Bidding and Battery Size Co-optimizat
 
 ## Co-design (Verification Using Short-term Data)
 
-1. Training of a signgle co-design agent:
+1. Training of a single co-design agent:
    ```console
-    ~/main_codesign_drqn.py
+    ./main_codesign_drqn.py
    ```
 1. Training of multiple co-design agents in parallel:
    ```console
-    ~/main_codesign_drqn_multiple.py
+    ./main_codesign_drqn_multiple.py
    ```
 
 <div align=left> 
@@ -38,7 +38,7 @@ Python implementation of "Renewable Energy Bidding and Battery Size Co-optimizat
 
 1. Training of co-desing agent with parallel workers:
    ```console
-    ~/main_codesign_drqn_apex.py
+    ./main_codesign_drqn_apex.py
    ```
 
 <div align=left> 
