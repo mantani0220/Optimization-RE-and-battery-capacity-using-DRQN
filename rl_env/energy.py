@@ -100,7 +100,7 @@ class RenewableEnergyEnv:
             observation = np.array([self.soc, 0.0, 0.0], dtype=np.float32)  # 終了時のダミー観測値
         
         else:
-            observation = np.array([self.soc, self.solar_radiation[self.current_step], current_market_price], dtype=np.float32)
+            observation = np.array([self.soc, current_solar_radiation, current_market_price], dtype=np.float32)
                 
         reward = self.calculate_reward(self.soc, current_market_price, current_solar_radiation, self.bidding, self.Pc_t, self.Pd_t, delta_t) 
         
@@ -125,4 +125,5 @@ class RenewableEnergyEnv:
         
         ft = (lambda_t * (self.xD_t - self.penalty) - beta_t * (Pc_t + Pd_t)) * delta_t
         reward = ft - lambda_t * solar_generation * delta_t
+
         return reward
