@@ -131,9 +131,7 @@ class AllCodesignEnergyEnv:
             done = True
             observation = np.array([self.soc, 0.0, 0.0], dtype=np.float32)  # 終了時のダミー観測値
         else:
-            current_solar_radiation = self.solar_radiation[self.current_step] 
-            current_market_price = np.mean(self.market_prices[self.current_step], axis=0)
-            observation = np.array([self.soc, self.solar_radiation[self.current_step], current_market_price], dtype=np.float32)
+            observation = np.array([self.soc, current_solar_radiation, current_market_price], dtype=np.float32)
                 
         reward = self.calculate_reward(self.agent_idx, self.days_per_month, self.soc, current_market_price, current_solar_radiation, self.bidding, self.Pc_t, self.Pd_t, delta_t) 
         
@@ -154,3 +152,4 @@ class AllCodesignEnergyEnv:
         else:
            reward = (ft - lambda_t * solar_generation * delta_t) * 365 /  days_per_month[agent_idx]  
         return reward
+
